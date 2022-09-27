@@ -18,7 +18,9 @@ const EventPage = () => {
             <ul>
                 <li>
                     {state.startDate}
+                    &nbsp;
                     to
+                    &nbsp;
                     {state.endDate}
                 </li>
                 <li>

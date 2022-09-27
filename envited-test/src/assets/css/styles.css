@@ -105,6 +105,8 @@ body {
 }
 
 @media only screen and (min-width: 1195px) {
+    /** macbook */
+
     .landing-wrapper  {
         display: grid;
         grid-template-columns: 1fr 1fr;
@@ -123,6 +125,31 @@ body {
       .landing-heading h1, p {
         text-align: right;
       }
+
+    .event-container {
+        display: grid;
+        margin: auto;
+        width: 100vw;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+        justify-content: center;
+        gap: 0px 0px;
+        grid-template-areas:
+            "event-wrapper event-image ."
+            ". . ."
+            ". . .";
+        padding-top: 5rem;
+    }
+    .event-wrapper { grid-area: event-wrapper; }
+    .event-image { grid-area: event-image; }
+    .event-heading p {
+        text-align: left;
+    }
+
+    .event-wrapper {
+        margin: auto;
+        width: 80%;
+    }
 }
 
 

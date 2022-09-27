@@ -14,7 +14,7 @@ const Index = () => {
         <section className="landing-calltoaction">
             <Link to="create" className="landing-button" aria-role="button">🎉 Create my event</Link>
         </section>
-        </main>
+    </main>
 }
 
 export default Index
