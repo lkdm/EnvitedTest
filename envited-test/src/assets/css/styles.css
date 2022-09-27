@@ -152,6 +152,36 @@ body {
     }
 }
 
+.event-details ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.event-details ul li {
+    clear: both;
+    margin-bottom: 3rem;
+}
+
+.event-details ul li div {
+    float: left;
+    margin-top: 2rem;
+    margin-left: 1rem;
+}
+
+.event-details ul li div b {
+    color: #240D57;
+}
+
+.icon {
+    padding: 1.1rem;
+    border-radius: 10px;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.1);
+    width: 56px;
+    height: 56px;
+    background-color: #fff;
+    float: left;
+}
+
 
 h1 {
     /* Imagine if had events. */

@@ -1,6 +1,7 @@
 import React, { useEffect } from "react"
 import { useLocation } from "react-router"
 import EventImage from "../assets/images/event-image.png"
+import Icon from "../components/Icon"
 
 
 const EventPage = () => {
@@ -17,14 +18,21 @@ const EventPage = () => {
         <section className="event-details">
             <ul>
                 <li>
+                    <Icon>🗓</Icon>
+                    <div>
                     {state.startDate}
                     &nbsp;
                     to
                     &nbsp;
                     {state.endDate}
+                    </div>
                 </li>
                 <li>
-                    {state.location}
+                    <Icon>📍</Icon>
+                    <div>
+                        <b>Street name</b><br />
+                        Suburb, State, Postcode
+                    </div>
                 </li>
             </ul>
         </section>
