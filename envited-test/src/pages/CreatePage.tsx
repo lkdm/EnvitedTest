@@ -12,16 +12,22 @@ const Create = () => {
     const [location, setLocation] = useState("");
     const [fileUpload, setFileUpload] = useState("");
 
+    const [error, setError] = useState("");
+
     const handleSubmit = (e: any) => {
         e.preventDefault()
-        console.log({
-            eventName,
-            eventHostName,
-            startDate,
-            endDate,
-            location,
-            fileUpload
-        })
+        if (eventName === "") {
+            return setError("Event Name must not be empty")
+        }
+        if (eventHostName === "") {
+            return setError("Event Host Name must not be empty")
+        }
+        if (startDate === "") {
+            return setError("Start Date must not be empty")
+        }
+        if (endDate === "") {
+            return setError("End Date must not be empty")
+        }
         navigate('/event', { state: {
             eventName,
             eventHostName,
@@ -40,7 +46,7 @@ const Create = () => {
         <section>
             <Form onSubmit={handleSubmit}>
                 <Form.Group className="mb-3">
-                    <Form.Label>Event Name</Form.Label>
+                    <Form.Label>Event Name *</Form.Label>
                     <Form.Control
                         type="text"
                         placeholder="Enter event name"
@@ -48,7 +54,7 @@ const Create = () => {
                     />
                 </Form.Group>
                 <Form.Group className="mb-3">
-                    <Form.Label>Event Host Name</Form.Label>
+                    <Form.Label>Event Host Name *</Form.Label>
                     <Form.Control
                         type="text"
                         placeholder="Enter host name"
@@ -56,7 +62,7 @@ const Create = () => {
                     />
                 </Form.Group>
                 <Form.Group className="mb-3">
-                    <Form.Label>Start Date</Form.Label>
+                    <Form.Label>Start Date *</Form.Label>
                     <Form.Control
                         type="date"
                         placeholder="Enter start date"
@@ -64,7 +70,7 @@ const Create = () => {
                     />
                 </Form.Group>
                 <Form.Group className="mb-3">
-                    <Form.Label>End Date</Form.Label>
+                    <Form.Label>End Date *</Form.Label>
                     <Form.Control
                         type="date"
                         placeholder="Enter start date"
@@ -87,6 +93,9 @@ const Create = () => {
                             Upload
                         </Button>
                 </Form.Group>
+                {error !== "" && <p>
+                    {error}
+                </p>}
                 <Button type="submit">Submit</Button>
             </Form>
         </section>
