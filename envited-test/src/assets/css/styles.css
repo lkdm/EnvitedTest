@@ -22,6 +22,17 @@ body {
 .landing-calltoaction {
     margin: auto;
 }
+.event-heading h1 {
+    text-align: left;
+    margin-bottom: 1.2rem;
+}
+.event-heading, .event-details {
+    margin: 1rem;
+}
+.event-heading p {
+    color: #828282;
+}
+
 
 @media only screen and (max-width: 843px)  {
     /** iPhone **/
@@ -50,6 +61,12 @@ body {
     .landing-calltoaction {
 
     }
+
+    .event-image {
+        border-radius: 0px;
+        width: 100wh;
+    }
+
 }
 
 @media only screen and (min-width: 834px) and (max-width: 1194px)  {
@@ -73,6 +90,17 @@ body {
     }
     .landing-calltoaction {
 
+    }
+
+    .event-container {
+        max-width: 40rem;
+        margin: auto;
+        padding-top: 5rem;
+    }
+    .event-wrapper {
+        margin-top: 50rem;
+        max-width: 40rem;
+        margin: auto;
     }
 }
 
