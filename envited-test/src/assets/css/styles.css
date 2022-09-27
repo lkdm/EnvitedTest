@@ -1,0 +1,135 @@
+body {
+    background: #F6F2FF;
+}
+
+.landing-heading p {
+    color: #4f4f4f;
+    text-align: center;
+    font-size: 24px;
+    font-weight: 300;
+}
+
+.landing-button {
+    color: #fff;
+    font-weight: 700;
+    text-decoration: none;
+    padding: 0.6rem 2.0rem;
+    background: linear-gradient(90deg, #8456EC 3.25%, #E87BF8 100%);
+    border-radius: 0.4rem;
+    width: 320px;
+    height: 55px;
+}
+.landing-calltoaction {
+    margin: auto;
+}
+
+@media only screen and (max-width: 843px)  {
+    /** iPhone **/
+    .landing-wrapper {
+        display: grid;
+        grid-template-columns: 100%;
+        justify-content: center;
+    }
+    .landing-heading {
+        margin-top: 4rem;
+        text-align: center;
+    }
+    .landing-heading h1 {
+        padding: 1.6rem;
+        font-size: 2.2rem;
+    }
+    .landing-heading p {
+        font-size: 1.0rem;
+    }
+    .landing-image {
+        margin: auto;
+    }
+    .landing-image img {
+        width: 80vw;
+    }
+    .landing-calltoaction {
+
+    }
+}
+
+@media only screen and (min-width: 834px) and (max-width: 1194px)  {
+    /** iPad **/
+    .landing-wrapper {
+        display: grid;
+        gap: 1em 1em;
+        grid-template-columns: 30rem;
+        justify-content: center;
+    }
+    .landing-heading {
+        margin-top: 2.4rem;
+    }
+    .landing-heading h1 {
+        font-size: 3.5rem;
+        line-height: 4.0rem;
+        font-weight: 700;
+    }
+    .landing-image {
+        margin: auto;
+    }
+    .landing-calltoaction {
+
+    }
+}
+
+@media only screen and (min-width: 1195px) {
+    .landing-wrapper  {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr;
+        gap: 0px 0px;
+        place-items: center;
+        grid-template-areas:
+          "landing-image landing-heading ."
+          "landing-image landing-calltoaction ."
+          ". . .";
+      }
+      .landing-image { grid-area: landing-image; }
+      .landing-heading { grid-area: landing-heading; }
+      .landing-calltoaction { grid-area: landing-calltoaction; }
+
+      .landing-heading h1, p {
+        text-align: right;
+      }
+}
+
+
+h1 {
+    /* Imagine if had events. */
+    font-family: 'Helvetica';
+    font-style: normal;
+    font-weight: bold;
+    line-height: 36px;
+
+    /* or 100% */
+    text-align: center;
+
+    color: #240D57;
+    line-height: 0rem;
+
+}
+
+h1 strong {
+    font-family: 'Helvetica';
+    font-style: normal;
+    font-weight: 700;
+    line-height: 74px;
+
+    /* identical to box height */
+    text-align: center;
+
+    background: linear-gradient(90deg, #8456EC 24.2%, #E87BF8 120.46%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-fill-color: transparent;
+}
+
+.landing-demoimage {
+    filter: drop-shadow(0px 0px 46.8696px rgba(0, 0, 0, 0.05));
+    border-radius: 35.1522px;
+}
