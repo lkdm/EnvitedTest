@@ -1,15 +1,16 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
 import { Route, Routes } from 'react-router-dom';
+import Create from './pages/CreatePage';
+import Index from './pages/IndexPage';
 
 function App() {
   return (
     <div className="App">
       <Routes>
-        <Route path="/" />
-        <Route path="create" />
-        <Route path="event" />
+        <Route path="/" element={<Index />} />
+        <Route path="create" element={<Create />} />
+        <Route path="event"  element={<Index />} />
       </Routes>
     </div>
   );
