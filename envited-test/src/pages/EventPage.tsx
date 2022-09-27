@@ -1,3 +1,4 @@
+import { format } from "date-fns"
 import React, { useEffect } from "react"
 import { useLocation } from "react-router"
 import EventImage from "../assets/images/event-image.png"
@@ -20,11 +21,9 @@ const EventPage = () => {
                 <li>
                     <Icon>🗓</Icon>
                     <div>
-                    {state.startDate}
-                    &nbsp;
-                    to
-                    &nbsp;
-                    {state.endDate}
+                    <b>{format(new Date(state.startDate), "dd/MM/yyyy hh:mmaaaaa'm'")}</b>
+                    <br />
+                    to&nbsp;{format(new Date(state.endDate), "dd/MM/yyyy hh:mmaaaaa'm'")}
                     </div>
                 </li>
                 <li>
