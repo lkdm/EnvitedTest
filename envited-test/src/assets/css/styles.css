@@ -106,20 +106,39 @@ body {
 @media only screen and (min-width: 1195px) {
     /** macbook */
 
-    .landing-wrapper  {
+    .landing-wrapper {
         display: grid;
-        grid-template-columns: 1fr 1fr;
-        grid-template-rows: 1fr;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
         gap: 0px 0px;
-        place-items: center;
         grid-template-areas:
           "landing-image landing-heading ."
           "landing-image landing-calltoaction ."
           ". . .";
       }
-      .landing-image { grid-area: landing-image; }
-      .landing-heading { grid-area: landing-heading; }
-      .landing-calltoaction { grid-area: landing-calltoaction; }
+      .landing-heading {
+        display: block;
+        grid-area: landing-heading;
+        width: 30rem;
+        padding-top: 24rem;
+        margin-left: 20rem;
+    }
+    .landing-heading h1 {
+        font-size: 3.5rem;
+        line-height: 2.4rem;
+    }
+    .landing-image {
+        grid-area: landing-image;
+        margin-top: 8rem;
+    }
+    .landing-calltoaction {
+        grid-area: landing-calltoaction;
+        align-self: start;
+        float: right;
+        margin-top: 2rem;
+        position: relative;
+        left: 18rem;
+    }
 
       .landing-heading h1, p {
         text-align: right;
